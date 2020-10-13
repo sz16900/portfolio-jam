@@ -22,6 +22,10 @@ const SEO = ({title, description}) => {
 
   return <Helmet htmlAttributes={{lang:"en"}} title={`${title} | ${siteTitle}`}>
     <meta name='description' content={description || siteDesc}/>
+    <link rel="icon"
+            type="image/svg"
+              href="../assets/logoSethy.svg"
+        />
     {/* <meta name='image' content={image}/> */}
     {/* twitter cards */}
     {/* <meta name="twitter:card" content="summary_large_image"/>

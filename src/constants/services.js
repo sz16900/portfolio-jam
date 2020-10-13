@@ -1,22 +1,26 @@
-import React from "react"
-import { FaCode, FaSketch, FaAndroid } from "react-icons/fa"
+import React from "react" 
+import berkeley from '../assets/berkeley.png'
+import bristol from '../assets/bristol.png'
+import microverse from '../assets/microverse.webp'
+import { graphql, useStaticQuery } from "gatsby"
+
 export default [
   {
     id: 1,
-    icon: <FaCode className="service-icon" />,
-    title: "web development",
-    text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
+    icon: berkeley,
+    title: "University of California, Berkeley",
+    text: 'B.S in Comparative Literature',
   },
   {
     id: 2,
-    icon: <FaSketch className="service-icon" />,
-    title: "web design",
-    text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
+    icon: bristol,
+    title: "University of Bristol",
+    text: 'M.S in Computer Science',
   },
   {
     id: 3,
-    icon: <FaAndroid className="service-icon" />,
-    title: "app design",
-    text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
+    icon: microverse,
+    title: "MIcroverse",
+    text: 'Full Stack Software Development School',
   },
 ]
