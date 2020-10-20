@@ -33,17 +33,17 @@ const Hero = () => {
         loop={Infinity}
         wrapper="h4"
         steps={[
-          'developer 🚀',
+          'Frontend 🚀',
           1500,
-          'designer ✏️',
+          'Backend ✏️',
           1500,
-          'engineer 🤓',
+          'FullStack 🤓',
           1500,
-          'surfer 🏄‍♂️',
+          'UI / UX 🏄‍♂️',
           1500,
-          'visionary 🧐',
+          'Agile 🧐',
           1500,
-          'mentor 👨‍🏫',
+          'Testing 👨‍🏫',
           1500,
           ''
         ]}
