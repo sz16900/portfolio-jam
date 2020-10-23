@@ -27,7 +27,7 @@ const About = ({data:{allStrapiAbout:{nodes}}}) => {
       </section>
     </Layout>
   )
-}
+} 
 export const query = graphql`
   {
     allStrapiAbout {

@@ -4,21 +4,30 @@ import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 import Typical from 'react-typical'
-const query = graphql`
-  {
-    file(relativePath: { eq: "logoSethy.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
+
+const query = graphql
+`{
+  imgHero: file(relativePath: {eq: "logoSethy.png"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
       }
     }
   }
+  allStrapiAbout {
+    nodes {
+      stack {
+        id
+        title
+      }
+    }
+  }
+}
 `
 
 const Hero = () => {
   const {
-    file: {
+    imgHero: {
       childImageSharp: { fluid },
     },
   } = useStaticQuery(query)
@@ -28,27 +37,27 @@ const Hero = () => {
         <article className="hero-info">
           <div className="underline"></div>
           <h1>i'm seth</h1>
-          <Typical
+          <Typical className="typical-revolver"
         steps={['Hello', 1000, 'Hello world!', 500]}
         loop={Infinity}
         wrapper="h4"
         steps={[
-          'Frontend 🚀',
+          'Frontend',
           1500,
-          'Backend ✏️',
+          'Backend',
           1500,
-          'FullStack 🤓',
+          'FullStack',
           1500,
-          'UI / UX 🏄‍♂️',
+          'UI / UX',
           1500,
-          'Agile 🧐',
+          'Agile',
           1500,
-          'Testing 👨‍🏫',
+          'Testing',
           1500,
           ''
         ]}
       />
-          <Link to="/contact" className="btn">
+          <Link to="/contact" className="btn" style={{color: 'black'}}>
             contact me
           </Link>
           <SocialLinks />
