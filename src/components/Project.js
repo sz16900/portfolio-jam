@@ -19,12 +19,12 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
             return <span style={{color: 'black'}} key={item.id}>{item.title}</span>
           })}
         </div>
-        <div className="project-links">
-          <a href={github} target="_blank">
-            <FaGithubSquare className="project-icon" />
+        <div className="project-links" >
+          <a href={github} target="_blank" className="btn ">
+            See Source 
           </a>
-          <a href={url} target="_blank">
-            <FaShareSquare className="project-icon" />
+          <a href={url} target="_blank" className="btn ">
+            See Live
           </a>
         </div>
       </div>
